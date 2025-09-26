@@ -31,6 +31,7 @@
 This project implements a comprehensive Random Forest machine learning pipeline for data analysis and prediction. The implementation includes data preprocessing, model training, evaluation, visualization, and hyperparameter optimization. Random Forest is an ensemble learning method that combines multiple decision trees to create robust and accurate predictions.
 
 **Key Features:**
+
 - Complete data preprocessing pipeline
 - Feature importance analysis
 - Cross-validation and model evaluation
@@ -40,7 +41,7 @@ This project implements a comprehensive Random Forest machine learning pipeline 
 
 ## Project Structure
 
-```
+```text
 Random-Forest/
 ├── code.ipynb                    # Main Jupyter notebook with complete implementation
 ├── data.csv                      # Primary dataset for training and testing
@@ -61,6 +62,7 @@ Random-Forest/
 ## Features
 
 ### Core Functionality
+
 - ✅ Data loading and exploration
 - ✅ Comprehensive data preprocessing
 - ✅ Missing value handling
@@ -75,6 +77,7 @@ Random-Forest/
 - ✅ Results export and reporting
 
 ### Advanced Features
+
 - 🔄 Grid Search and Random Search optimization
 - 📊 Interactive visualizations
 - 💾 Model persistence and loading
@@ -85,6 +88,7 @@ Random-Forest/
 ## Requirements
 
 ### System Requirements
+
 - **Python**: 3.7 or higher
 - **Memory**: Minimum 4GB RAM (8GB+ recommended for large datasets)
 - **Storage**: At least 1GB free space
@@ -93,7 +97,8 @@ Random-Forest/
 ### Python Dependencies
 
 #### Core Libraries
-```
+
+```text
 pandas>=1.3.0
 numpy>=1.21.0
 scikit-learn>=1.0.0
@@ -101,14 +106,16 @@ jupyter>=1.0.0
 ```
 
 #### Visualization Libraries
-```
+
+```text
 matplotlib>=3.4.0
 seaborn>=0.11.0
 plotly>=5.0.0
 ```
 
 #### Additional Utilities
-```
+
+```text
 joblib>=1.0.0
 tqdm>=4.62.0
 ```
@@ -118,12 +125,14 @@ tqdm>=4.62.0
 ### Method 1: Using pip (Recommended)
 
 1. **Clone or download the project:**
+
    ```bash
    git clone <repository-url>
    cd Random-Forest
    ```
 
 2. **Create a virtual environment (recommended):**
+
    ```bash
    python -m venv rf_env
    rf_env\Scripts\activate  # On Windows
@@ -131,6 +140,7 @@ tqdm>=4.62.0
    ```
 
 3. **Install dependencies:**
+
    ```bash
    pip install pandas numpy scikit-learn jupyter matplotlib seaborn plotly joblib tqdm
    ```
@@ -138,12 +148,14 @@ tqdm>=4.62.0
 ### Method 2: Using conda
 
 1. **Create conda environment:**
+
    ```bash
    conda create -n rf_env python=3.9
    conda activate rf_env
    ```
 
 2. **Install packages:**
+
    ```bash
    conda install pandas numpy scikit-learn jupyter matplotlib seaborn plotly joblib tqdm
    ```
@@ -151,6 +163,7 @@ tqdm>=4.62.0
 ### Method 3: Using requirements.txt
 
 1. **Create requirements.txt file:**
+
    ```bash
    echo pandas>=1.3.0 > requirements.txt
    echo numpy>=1.21.0 >> requirements.txt
@@ -164,6 +177,7 @@ tqdm>=4.62.0
    ```
 
 2. **Install from requirements:**
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -171,19 +185,23 @@ tqdm>=4.62.0
 ## Quick Start
 
 ### 1. Launch Jupyter Notebook
+
 ```bash
 jupyter notebook
 ```
 
 ### 2. Open the Main Notebook
+
 - Navigate to `code.ipynb` in your browser
 - The notebook will automatically open
 
 ### 3. Run All Cells
+
 - Go to `Cell` → `Run All` or use `Shift + Enter` for each cell
 - The complete pipeline will execute automatically
 
 ### 4. View Results
+
 - Check the generated visualizations
 - Review model performance metrics
 - Examine feature importance rankings
@@ -206,6 +224,7 @@ jupyter notebook
 ### Notebook Execution
 
 1. **Sequential execution:**
+
    ```python
    # Cell 1: Import libraries and load data
    # Cell 2: Data exploration and visualization
@@ -238,6 +257,7 @@ jupyter notebook
 ```
 
 **Output:**
+
 - Dataset overview
 - Missing value report
 - Statistical summary
@@ -257,6 +277,7 @@ jupyter notebook
 ```
 
 **Techniques Used:**
+
 - **Missing Values:** Mean/median imputation, forward fill, or removal
 - **Categorical Encoding:** Label encoding, one-hot encoding
 - **Scaling:** StandardScaler, MinMaxScaler (if required)
@@ -291,6 +312,7 @@ random_state=42          # For reproducibility
 **Objective:** Assess model performance using multiple metrics
 
 **For Classification:**
+
 - Accuracy Score
 - Precision, Recall, F1-Score
 - Confusion Matrix
@@ -298,6 +320,7 @@ random_state=42          # For reproducibility
 - Classification Report
 
 **For Regression:**
+
 - Mean Squared Error (MSE)
 - Root Mean Squared Error (RMSE)
 - Mean Absolute Error (MAE)
@@ -339,6 +362,7 @@ random_state=42          # For reproducibility
 ```
 
 **Parameters to tune:**
+
 - `n_estimators`: [50, 100, 200, 300]
 - `max_depth`: [None, 10, 20, 30]
 - `min_samples_split`: [2, 5, 10]
@@ -386,6 +410,7 @@ value1,value2,value3,...,target_value
 ### Algorithm Overview
 
 Random Forest is an ensemble learning method that:
+
 - Builds multiple decision trees
 - Uses bootstrap sampling (bagging)
 - Employs random feature selection
@@ -536,13 +561,15 @@ save_format='png'        # Output format
 ### Common Issues and Solutions
 
 #### Issue 1: Import Errors
-```
+
+```text
 Error: ModuleNotFoundError: No module named 'sklearn'
 Solution: pip install scikit-learn
 ```
 
 #### Issue 2: Memory Issues
-```
+
+```text
 Error: MemoryError during model training
 Solutions:
 - Reduce dataset size
@@ -552,7 +579,8 @@ Solutions:
 ```
 
 #### Issue 3: Poor Performance
-```
+
+```text
 Symptoms: Low accuracy, high overfitting
 Solutions:
 - Increase training data
@@ -562,7 +590,8 @@ Solutions:
 ```
 
 #### Issue 4: Long Training Time
-```
+
+```text
 Symptoms: Model takes too long to train
 Solutions:
 - Reduce n_estimators
@@ -574,6 +603,7 @@ Solutions:
 ### Debug Mode
 
 Enable verbose output for troubleshooting:
+
 ```python
 rf = RandomForestClassifier(verbose=2, n_jobs=1)
 ```
@@ -660,6 +690,7 @@ python test_model.py --dataset test_data.csv
 ## References
 
 ### Documentation
+
 - [scikit-learn Random Forest Documentation](https://scikit-learn.org/stable/modules/ensemble.html#random-forests)
 - [Pandas User Guide](https://pandas.pydata.org/docs/user_guide/)
 - [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/)
@@ -667,15 +698,18 @@ python test_model.py --dataset test_data.csv
 - [Seaborn Gallery](https://seaborn.pydata.org/examples/index.html)
 
 ### Academic Papers
+
 - Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5-32.
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). The Elements of Statistical Learning.
 
 ### Online Resources
+
 - [Kaggle Learn: Machine Learning](https://www.kaggle.com/learn/machine-learning)
 - [Coursera: Machine Learning Course](https://www.coursera.org/learn/machine-learning)
 - [YouTube: StatQuest Random Forest](https://www.youtube.com/watch?v=J4Wdy0Wc_xQ)
 
 ### Tools and Libraries
+
 - [Python.org](https://www.python.org/)
 - [Anaconda Distribution](https://www.anaconda.com/)
 - [Google Colab](https://colab.research.google.com/)
@@ -686,6 +720,7 @@ python test_model.py --dataset test_data.csv
 This project is provided for educational and research purposes. Please ensure compliance with data usage rights and applicable licenses for all dependencies.
 
 ### Disclaimer
+
 - This implementation is for educational purposes
 - Verify results with domain experts
 - Test thoroughly before production use
@@ -709,5 +744,3 @@ This project is provided for educational and research purposes. Please ensure co
 - [🤝 Contributing](#contributing)
 
 ---
-
-*For questions or support, please open an issue in the project repository.*
